@@ -5,16 +5,15 @@ function Letter(letter, log) {
     this.log = false;
 
     this.letterGuessed = function() {
-        for(var i = 0; i < this.word.length; i++) {
-            if(word[i] == guess) {
-                wordGuess = guess;
+            if(guess == this.letter) {
+                letterDisplay = this.letter;
             } else{
-                wordGuess = "_";
+                letterDisplay = "_";
             };
         };
     };
-    this.check = function(guess) {
-        if(wordGuess == guess) {
+    this.check = function() {
+        if(guess == this.letter) {
             this.log = true;
         }
     };
