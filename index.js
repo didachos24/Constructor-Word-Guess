@@ -1,7 +1,25 @@
-var word = require("./word");
+var word = require("./word.js");
 
-var capitals = ["bogota", "medellin", "cali", "barranquilla", "cartagena"];
+var input = process.argv[2];
 
-var myCity = calpitals[Math.floor(Math.random()*capitals.length)];
+var guess = "";
 
-var wordToGuess = new Word(myCity);
+if(input.length < 2 && input.match(/^[a-zA-Z]+$/)) {
+    var guess = input;
+    console.log(guess);
+    run();
+} else{ 
+    console.log("----Please choose just a letter----");
+};
+
+function run() {
+    var capitals = ["bogota", "medellin", "cali", "barranquilla", "cartagena"];
+
+    var myCity = capitals[Math.floor(Math.random()*capitals.length)];
+
+    console.log(myCity);
+
+    var wordToGuess = new Word(myCity);
+
+
+};

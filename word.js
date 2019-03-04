@@ -25,6 +25,8 @@ function Word(arg) {
     this.logic = function() {
         for(var j = 0; j < wordDisplay.length; j++) {
             wordDisplay[j].check();
-        }
-    }
-}
+        };
+    };
+};
+
+// export {Word};

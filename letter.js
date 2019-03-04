@@ -5,16 +5,17 @@ function Letter(letter, log) {
     this.log = false;
 
     this.letterGuessed = function() {
-            if(guess == this.letter) {
-                letterDisplay = this.letter;
-            } else{
-                letterDisplay = "_";
-            };
+        if(guess == this.letter) {
+            letterDisplay = this.letter;
+        } else{
+            letterDisplay = "_";
         };
     };
     this.check = function() {
         if(guess == this.letter) {
             this.log = true;
-        }
+        };
     };
-}
+};
+
+// export {Letter};
